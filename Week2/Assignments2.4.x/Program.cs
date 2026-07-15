@@ -23,23 +23,30 @@ foreach (int element in arrayElements)
 }
 Console.WriteLine($"The sum of these elements is: {arraySum}");
 
-Console.ReadLine(); //Keeps console open
+Console.WriteLine("\nPress any key to continue");
+Console.ReadKey(); //Keeps console open
 
 //Assignment2.4.2 =======================================================================================================================
 
 int[] numbersList = [25, 63, 10];
 int largestNum = 0;
+int indexOfLargest = 0;
 
-foreach (int number in numbersList)
+for (int i = 0; i < numbersList.Length; i++)
 {
-    if (number > largestNum)
+    int currentNum = numbersList[i];
+
+    if (currentNum > largestNum)
     {
-        largestNum = number;
+        largestNum = currentNum;
+        indexOfLargest = i;
     }
 }
 
-Console.WriteLine($"The largest number out of {string.Join(", ", numbersList)} is {largestNum}");
-Console.ReadLine();
+Console.WriteLine($"The largest number out of {string.Join(", ", numbersList)} is {largestNum}, at index: {indexOfLargest}");
+
+Console.WriteLine("\nPress any key to continue");
+Console.ReadKey(); //Keeps console open
 
 //Assignment2.4.3 =======================================================================================================================
 
