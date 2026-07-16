@@ -30,7 +30,7 @@
                 {
                     int randomNumber = random.Next(icons.Count);
                     iconLabel.Text = icons[randomNumber];
-                    // iconLabel.ForeColor = iconLabel.BackColor;
+                    iconLabel.ForeColor = iconLabel.BackColor; //Hides icons
                     icons.RemoveAt(randomNumber);
                 }
             }
@@ -64,22 +64,22 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
             label16 = new Label();
+            label15 = new Label();
+            label14 = new Label();
+            label13 = new Label();
+            label12 = new Label();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -119,173 +119,17 @@
             tableLayoutPanel1.Size = new Size(1118, 576);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // label16
             // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label1.Location = new Point(5, 2);
-            label1.Name = "label1";
-            label1.Size = new Size(271, 141);
-            label1.TabIndex = 0;
-            label1.Text = "c";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label2.Location = new Point(284, 2);
-            label2.Name = "label2";
-            label2.Size = new Size(271, 141);
-            label2.TabIndex = 1;
-            label2.Text = "c";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Fill;
-            label3.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label3.Location = new Point(563, 2);
-            label3.Name = "label3";
-            label3.Size = new Size(271, 141);
-            label3.TabIndex = 2;
-            label3.Text = "c";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Dock = DockStyle.Fill;
-            label4.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label4.Location = new Point(842, 2);
-            label4.Name = "label4";
-            label4.Size = new Size(271, 141);
-            label4.TabIndex = 3;
-            label4.Text = "c";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Fill;
-            label5.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label5.Location = new Point(5, 145);
-            label5.Name = "label5";
-            label5.Size = new Size(271, 141);
-            label5.TabIndex = 4;
-            label5.Text = "c";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Dock = DockStyle.Fill;
-            label6.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label6.Location = new Point(284, 145);
-            label6.Name = "label6";
-            label6.Size = new Size(271, 141);
-            label6.TabIndex = 5;
-            label6.Text = "c";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Dock = DockStyle.Fill;
-            label7.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label7.Location = new Point(563, 145);
-            label7.Name = "label7";
-            label7.Size = new Size(271, 141);
-            label7.TabIndex = 6;
-            label7.Text = "c";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Dock = DockStyle.Fill;
-            label8.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label8.Location = new Point(842, 145);
-            label8.Name = "label8";
-            label8.Size = new Size(271, 141);
-            label8.TabIndex = 7;
-            label8.Text = "c";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Dock = DockStyle.Fill;
-            label9.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label9.Location = new Point(5, 288);
-            label9.Name = "label9";
-            label9.Size = new Size(271, 141);
-            label9.TabIndex = 8;
-            label9.Text = "c";
-            label9.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Dock = DockStyle.Fill;
-            label10.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label10.Location = new Point(284, 288);
-            label10.Name = "label10";
-            label10.Size = new Size(271, 141);
-            label10.TabIndex = 9;
-            label10.Text = "c";
-            label10.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Dock = DockStyle.Fill;
-            label11.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label11.Location = new Point(563, 288);
-            label11.Name = "label11";
-            label11.Size = new Size(271, 141);
-            label11.TabIndex = 10;
-            label11.Text = "c";
-            label11.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Dock = DockStyle.Fill;
-            label12.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label12.Location = new Point(842, 288);
-            label12.Name = "label12";
-            label12.Size = new Size(271, 141);
-            label12.TabIndex = 11;
-            label12.Text = "c";
-            label12.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Dock = DockStyle.Fill;
-            label13.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label13.Location = new Point(5, 431);
-            label13.Name = "label13";
-            label13.Size = new Size(271, 143);
-            label13.TabIndex = 12;
-            label13.Text = "c";
-            label13.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Dock = DockStyle.Fill;
-            label14.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label14.Location = new Point(284, 431);
-            label14.Name = "label14";
-            label14.Size = new Size(271, 143);
-            label14.TabIndex = 13;
-            label14.Text = "c";
-            label14.TextAlign = ContentAlignment.MiddleCenter;
+            label16.AutoSize = true;
+            label16.Dock = DockStyle.Fill;
+            label16.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label16.Location = new Point(842, 431);
+            label16.Name = "label16";
+            label16.Size = new Size(271, 143);
+            label16.TabIndex = 15;
+            label16.Text = "c";
+            label16.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label15
             // 
@@ -299,17 +143,174 @@
             label15.Text = "c";
             label15.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // label14
             // 
-            label16.AutoSize = true;
-            label16.Dock = DockStyle.Fill;
-            label16.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
-            label16.Location = new Point(842, 431);
-            label16.Name = "label16";
-            label16.Size = new Size(271, 143);
-            label16.TabIndex = 15;
-            label16.Text = "c";
-            label16.TextAlign = ContentAlignment.MiddleCenter;
+            label14.AutoSize = true;
+            label14.Dock = DockStyle.Fill;
+            label14.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label14.Location = new Point(284, 431);
+            label14.Name = "label14";
+            label14.Size = new Size(271, 143);
+            label14.TabIndex = 13;
+            label14.Text = "c";
+            label14.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Dock = DockStyle.Fill;
+            label13.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label13.Location = new Point(5, 431);
+            label13.Name = "label13";
+            label13.Size = new Size(271, 143);
+            label13.TabIndex = 12;
+            label13.Text = "c";
+            label13.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Dock = DockStyle.Fill;
+            label12.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label12.Location = new Point(842, 288);
+            label12.Name = "label12";
+            label12.Size = new Size(271, 141);
+            label12.TabIndex = 11;
+            label12.Text = "c";
+            label12.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Dock = DockStyle.Fill;
+            label11.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label11.Location = new Point(563, 288);
+            label11.Name = "label11";
+            label11.Size = new Size(271, 141);
+            label11.TabIndex = 10;
+            label11.Text = "c";
+            label11.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Dock = DockStyle.Fill;
+            label10.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label10.Location = new Point(284, 288);
+            label10.Name = "label10";
+            label10.Size = new Size(271, 141);
+            label10.TabIndex = 9;
+            label10.Text = "c";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Dock = DockStyle.Fill;
+            label9.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label9.Location = new Point(5, 288);
+            label9.Name = "label9";
+            label9.Size = new Size(271, 141);
+            label9.TabIndex = 8;
+            label9.Text = "c";
+            label9.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Dock = DockStyle.Fill;
+            label8.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label8.Location = new Point(842, 145);
+            label8.Name = "label8";
+            label8.Size = new Size(271, 141);
+            label8.TabIndex = 7;
+            label8.Text = "c";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Dock = DockStyle.Fill;
+            label7.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label7.Location = new Point(563, 145);
+            label7.Name = "label7";
+            label7.Size = new Size(271, 141);
+            label7.TabIndex = 6;
+            label7.Text = "c";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Dock = DockStyle.Fill;
+            label6.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label6.Location = new Point(284, 145);
+            label6.Name = "label6";
+            label6.Size = new Size(271, 141);
+            label6.TabIndex = 5;
+            label6.Text = "c";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Dock = DockStyle.Fill;
+            label5.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label5.Location = new Point(5, 145);
+            label5.Name = "label5";
+            label5.Size = new Size(271, 141);
+            label5.TabIndex = 4;
+            label5.Text = "c";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Dock = DockStyle.Fill;
+            label4.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label4.Location = new Point(842, 2);
+            label4.Name = "label4";
+            label4.Size = new Size(271, 141);
+            label4.TabIndex = 3;
+            label4.Text = "c";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Dock = DockStyle.Fill;
+            label3.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label3.Location = new Point(563, 2);
+            label3.Name = "label3";
+            label3.Size = new Size(271, 141);
+            label3.TabIndex = 2;
+            label3.Text = "c";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Fill;
+            label2.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label2.Location = new Point(284, 2);
+            label2.Name = "label2";
+            label2.Size = new Size(271, 141);
+            label2.TabIndex = 1;
+            label2.Text = "c";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Webdings", 48F, FontStyle.Bold, GraphicsUnit.Point, 2);
+            label1.Location = new Point(5, 2);
+            label1.Name = "label1";
+            label1.Size = new Size(271, 141);
+            label1.TabIndex = 0;
+            label1.Text = "c";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click;
             // 
             // MatchingGameForm
             // 
