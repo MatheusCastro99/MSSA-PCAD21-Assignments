@@ -1,3 +1,6 @@
+using System.Diagnostics;
+using System.Media;
+
 namespace WinFormsMatchingGame
 {
     public partial class MatchingGameForm : Form
@@ -5,6 +8,8 @@ namespace WinFormsMatchingGame
         public MatchingGameForm()
         {
             InitializeComponent();
+
+            InitializeSoundPlayers();
 
             AssignIconsToSquares();
         }
@@ -18,8 +23,41 @@ namespace WinFormsMatchingGame
         // that the player clicks
         Label secondClicked = null;
 
+        private SoundPlayer clickSound;
+        private SoundPlayer celebrateSound;
+
+        private void InitializeSoundPlayers()
+        {
+            try
+            {
+                // Get the project root directory
+                string projectRoot = AppDomain.CurrentDomain.BaseDirectory;
+
+                // Initialize click sound
+                string clickSoundPath = Path.Combine(projectRoot, "Components", "click.wav");
+                if (File.Exists(clickSoundPath))
+                {
+                    clickSound = new SoundPlayer(clickSoundPath);
+
+                    Debug.WriteLine("ClickSound Loaded");
+                }
+
+                // Initialize celebration sound
+                string celebrateSoundPath = Path.Combine(projectRoot, "Components", "celebrate.wav");
+                if (File.Exists(celebrateSoundPath))
+                {
+                    celebrateSound = new SoundPlayer(celebrateSoundPath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading sound files: {ex.Message}", "Sound Error");
+            }
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
+            
             // The timer is only on after two non-matching 
             // icons have been shown to the player, 
             // so ignore any clicks if the timer is running
@@ -45,6 +83,8 @@ namespace WinFormsMatchingGame
                     firstClicked = clickedLabel;
                     firstClicked.ForeColor = Color.Black;
 
+                    PlayClickSound();
+
                     return;
                 }
 
@@ -55,6 +95,8 @@ namespace WinFormsMatchingGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
 
+                PlayClickSound();
+
                 // If the player clicked two matching icons, keep them 
                 // black and reset firstClicked and secondClicked 
                 // so the player can click another icon
@@ -62,6 +104,9 @@ namespace WinFormsMatchingGame
                 {
                     firstClicked = null;
                     secondClicked = null;
+
+                    Thread.Sleep(1000);
+                    PlayCelebrationSound();
 
                     CheckForWinner();
 
@@ -98,6 +143,42 @@ namespace WinFormsMatchingGame
             secondClicked = null;
         }
 
+        private void PlayClickSound()
+        {
+            try
+            {
+                if (clickSound != null)
+                {
+                    clickSound.Play();
+                    // Debug.WriteLine("ClickSound Played!");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Silently fail - don't disrupt gameplay if sound fails
+                System.Diagnostics.Debug.WriteLine($"Error playing click sound: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Play the celebration sound effect for matched pairs
+        /// </summary>
+        private void PlayCelebrationSound()
+        {
+            try
+            {
+                if (celebrateSound != null)
+                {
+                    celebrateSound.Play();
+                    // Debug.WriteLine("CelebrateSound Played!");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Silently fail - don't disrupt gameplay if sound fails
+                System.Diagnostics.Debug.WriteLine($"Error playing celebration sound: {ex.Message}");
+            }
+        }
         private void CheckForWinner()
         {
             // Go through all of the labels in the TableLayoutPanel, 
