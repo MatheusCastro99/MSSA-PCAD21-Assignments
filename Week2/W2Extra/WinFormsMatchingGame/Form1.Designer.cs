@@ -63,6 +63,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tableLayoutPanel1 = new TableLayoutPanel();
             label16 = new Label();
             label15 = new Label();
@@ -80,6 +81,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -130,6 +132,7 @@
             label16.TabIndex = 15;
             label16.Text = "c";
             label16.TextAlign = ContentAlignment.MiddleCenter;
+            label16.Click += label1_Click;
             // 
             // label15
             // 
@@ -142,6 +145,7 @@
             label15.TabIndex = 14;
             label15.Text = "c";
             label15.TextAlign = ContentAlignment.MiddleCenter;
+            label15.Click += label1_Click;
             // 
             // label14
             // 
@@ -154,6 +158,7 @@
             label14.TabIndex = 13;
             label14.Text = "c";
             label14.TextAlign = ContentAlignment.MiddleCenter;
+            label14.Click += label1_Click;
             // 
             // label13
             // 
@@ -166,6 +171,7 @@
             label13.TabIndex = 12;
             label13.Text = "c";
             label13.TextAlign = ContentAlignment.MiddleCenter;
+            label13.Click += label1_Click;
             // 
             // label12
             // 
@@ -178,6 +184,7 @@
             label12.TabIndex = 11;
             label12.Text = "c";
             label12.TextAlign = ContentAlignment.MiddleCenter;
+            label12.Click += label1_Click;
             // 
             // label11
             // 
@@ -190,6 +197,7 @@
             label11.TabIndex = 10;
             label11.Text = "c";
             label11.TextAlign = ContentAlignment.MiddleCenter;
+            label11.Click += label1_Click;
             // 
             // label10
             // 
@@ -202,6 +210,7 @@
             label10.TabIndex = 9;
             label10.Text = "c";
             label10.TextAlign = ContentAlignment.MiddleCenter;
+            label10.Click += label1_Click;
             // 
             // label9
             // 
@@ -214,6 +223,7 @@
             label9.TabIndex = 8;
             label9.Text = "c";
             label9.TextAlign = ContentAlignment.MiddleCenter;
+            label9.Click += label1_Click;
             // 
             // label8
             // 
@@ -226,6 +236,7 @@
             label8.TabIndex = 7;
             label8.Text = "c";
             label8.TextAlign = ContentAlignment.MiddleCenter;
+            label8.Click += label1_Click;
             // 
             // label7
             // 
@@ -238,6 +249,7 @@
             label7.TabIndex = 6;
             label7.Text = "c";
             label7.TextAlign = ContentAlignment.MiddleCenter;
+            label7.Click += label1_Click;
             // 
             // label6
             // 
@@ -250,6 +262,7 @@
             label6.TabIndex = 5;
             label6.Text = "c";
             label6.TextAlign = ContentAlignment.MiddleCenter;
+            label6.Click += label1_Click;
             // 
             // label5
             // 
@@ -262,6 +275,7 @@
             label5.TabIndex = 4;
             label5.Text = "c";
             label5.TextAlign = ContentAlignment.MiddleCenter;
+            label5.Click += label1_Click;
             // 
             // label4
             // 
@@ -274,6 +288,7 @@
             label4.TabIndex = 3;
             label4.Text = "c";
             label4.TextAlign = ContentAlignment.MiddleCenter;
+            label4.Click += label1_Click;
             // 
             // label3
             // 
@@ -286,6 +301,7 @@
             label3.TabIndex = 2;
             label3.Text = "c";
             label3.TextAlign = ContentAlignment.MiddleCenter;
+            label3.Click += label1_Click;
             // 
             // label2
             // 
@@ -298,6 +314,7 @@
             label2.TabIndex = 1;
             label2.Text = "c";
             label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label1_Click;
             // 
             // label1
             // 
@@ -311,6 +328,11 @@
             label1.Text = "c";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.Click += label1_Click;
+            // 
+            // timer1
+            // 
+            timer1.Interval = 750;
+            timer1.Tick += timer1_Tick;
             // 
             // MatchingGameForm
             // 
@@ -344,5 +366,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
