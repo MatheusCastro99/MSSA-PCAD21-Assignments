@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="W3ChallengeLab1/W3ChallengeLab1.csproj" />
   <Project Path="W3ChallengeLab2/W3ChallengeLab2.csproj" />
+  <Project Path="W3ChallengeLab3/W3ChallengeLab3.csproj" Id="2e3fe694-3d0c-487a-9551-1aa96d278ab6" />
+  <Project Path="W3ChallengeLab4/W3ChallengeLab4.csproj" Id="264b9b7b-68b8-4a2d-919c-c39c75e69c3b" />
 </Solution>
