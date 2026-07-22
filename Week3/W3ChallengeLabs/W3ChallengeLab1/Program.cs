@@ -7,7 +7,7 @@ IsPalindrome(palindromeCandidate);
 
 void IsPalindrome(string palindromeCandidate)
 {
-    for (int i = 0; i < palindromeCandidate.Length; i++)
+    for (int i = 0; i < (palindromeCandidate.Length/2); i++)
     {
         if (palindromeCandidate[i] != palindromeCandidate[(palindromeCandidate.Length - 1) - i])
         {

@@ -1,9 +1,16 @@
-﻿// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+﻿//PROBLEM:
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+//GIVENS AND CONSTRAINTS
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-// Create nested loop that will iterate through each index at each index position
-// Because X + Y and Y + X are the same, each inner loop index only need to iterate through those in front of outer loop index
+//THOUGHTS:
+// Create nested loop that will iterate each index at each index position
+// Because X + Y and Y + X are the same, each inner loop index only need to iterate through those in front of outer loop current index
 //    - Set inner loop index to start at outer loop's index
+//    - Exercise constraint: May not use the same element twice.
+//    - Inner loop == (outer loop + 1)
+//    - Last index does not need to be checked because it was already tested agains all other indexes
 
 int[] nums;
 int targetNum;
@@ -22,13 +29,8 @@ void FindSum (int[] nums, int targetNum)
 {
     for (int i = 0; i < nums.Length; i++)
     {
-        for (int j = i; j < nums.Length; j++)  //j = i because we do not need to check backwards
+        for (int j = i+1; j < nums.Length; j++)  //j = i+1 because we do not need to check backwards or the same element
         {
-            if (j == i)                        //Excercise constraint: you may not use the same element twice.
-            {                                  //   - Because j and i are iterating in the same array, j == i means nums[j] == nums[i]
-                continue;
-            }
-
             if ((nums[i] + nums[j]) == targetNum)
             {
                 Console.WriteLine("Those two indexes value add to the Target Number: ");

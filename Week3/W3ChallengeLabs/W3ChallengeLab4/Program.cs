@@ -1,4 +1,5 @@
-﻿//You are given a string s consisting only of uppercase English letters.
+﻿//DESCRIPTION AND LINE OF THOUGHT
+//You are given a string s consisting only of uppercase English letters.
 //You can apply some operations to this string where, in one operation, you can remove any occurrence of one of the substrings "AB" or "CD" from s.
 
 //Return the minimum possible length of the resulting string that you can obtain.
@@ -19,7 +20,7 @@
 string letters = "ABFCACDB";
 string lettersOps = letters;
 
-Console.WriteLine($"Initial string: {letters}\nFinal string: {lettersOps}\nMinimum Length {MinLength(lettersOps)}");
+Console.WriteLine($"Initial string: {letters}\nMinimum Length {MinLength(lettersOps)}\nFinal string: {lettersOps}");
 
 int MinLength(string sentence)
 {
@@ -37,7 +38,7 @@ int MinLength(string sentence)
 
     if (IsOcurrenceFound) //Recursion occurs after the whole string is iterated instead after each occurence is found
     {
-        MinLength(lettersOps);
+        return MinLength(lettersOps);
     }
 
     return lettersOps.Length;
