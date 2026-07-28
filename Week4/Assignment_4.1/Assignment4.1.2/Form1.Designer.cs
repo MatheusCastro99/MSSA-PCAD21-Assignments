@@ -1,6 +1,6 @@
 ﻿namespace Assignment4._1._2
 {
-    partial class Form1
+    partial class CalculatorApp
     {
         /// <summary>
         ///  Required designer variable.
@@ -75,6 +75,7 @@
             num1TextBox.Size = new Size(149, 28);
             num1TextBox.TabIndex = 3;
             num1TextBox.Text = "";
+            num1TextBox.TextChanged += ValidateNum;
             // 
             // num2TextBox
             // 
@@ -83,6 +84,7 @@
             num2TextBox.Size = new Size(149, 28);
             num2TextBox.TabIndex = 4;
             num2TextBox.Text = "";
+            num2TextBox.TextChanged += ValidateNum;
             // 
             // resultLabel
             // 
@@ -145,7 +147,7 @@
             resetButton.UseVisualStyleBackColor = true;
             resetButton.Click += resetButton_Click;
             // 
-            // Form1
+            // CalculatorApp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -161,8 +163,8 @@
             Controls.Add(result);
             Controls.Add(num2);
             Controls.Add(num1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "CalculatorApp";
+            Text = "Calculator App";
             ResumeLayout(false);
             PerformLayout();
         }

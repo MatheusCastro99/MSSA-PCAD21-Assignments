@@ -1,9 +1,9 @@
 namespace Assignment4._1._2
 {
-    public partial class Form1 : Form
+    public partial class CalculatorApp : Form
     {
         MyMath myOps = new();
-        public Form1()
+        public CalculatorApp()
         {
             InitializeComponent();
         }
@@ -45,6 +45,36 @@ namespace Assignment4._1._2
             num1TextBox.Text = "";
             num2TextBox.Text = "";
             resultLabel.Text = "";
+
+            num1TextBox.BackColor = default(Color);
+            num2TextBox.BackColor = default(Color);
+
+            ToggleButtons(true);
+        }
+
+        private void ValidateNum(object sender, EventArgs e)
+        {
+            RichTextBox box = (RichTextBox)sender;
+            if (double.TryParse(box.Text, out double var))
+            {
+                box.BackColor = Color.LightGreen;
+
+                ToggleButtons(true);
+            }
+            else
+            {
+                box.BackColor = Color.LightPink;
+
+                ToggleButtons(false);
+            }
+        }
+
+        private void ToggleButtons(bool isEnabled)
+        {
+            addButton.Enabled = isEnabled;
+            subButton.Enabled = isEnabled;
+            multButton.Enabled = isEnabled;
+            divButton.Enabled = isEnabled;
         }
     }
 }
