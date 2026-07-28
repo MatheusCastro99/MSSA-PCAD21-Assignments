@@ -67,6 +67,11 @@ namespace Assignment4._1._2
 
                 ToggleButtons(false);
             }
+
+            if (box.Name == "num2TextBox" && box.Text == "0")
+            {
+                divButton.Enabled = false;
+            }
         }
 
         private void ToggleButtons(bool isEnabled)
