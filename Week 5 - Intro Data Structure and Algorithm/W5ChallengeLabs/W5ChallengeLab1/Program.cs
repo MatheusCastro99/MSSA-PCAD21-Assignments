@@ -15,7 +15,6 @@ for(int i = 0; i<nums.Length; i++)
 Console.WriteLine(unique.First<int>()); //Exercise guarantees that only one element is unique, so it will be the only element in the Hash.
 #endregion
 
-
 #region WEEK 5 CHALLENGE LAB 2
 //Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
 

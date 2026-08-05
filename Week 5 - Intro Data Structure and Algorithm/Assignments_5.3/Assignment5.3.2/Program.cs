@@ -1,4 +1,5 @@
-﻿//You are climbing a staircase. It takes n steps to reach the top.
+﻿#region PROBLEM DESCRIPTION, CONTRAINTS, AND THOUGHTS
+//You are climbing a staircase. It takes n steps to reach the top.
 //Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 
 //LeetCode Constraints: 1 <= n <= 45
@@ -10,7 +11,25 @@
 //Each step added will contain C(n-1) and then some more
 //Recursion / Iteration could account for fibonacci pattern
 
-//It seems like c will always correspond to nth number of fibonacci sequence
+//n=4
+//c1 1, 1, 1, 1
+//c2 2, 1, 1
+//c3 1, 2, 1
+//c4 1, 1, 2
+//c5 2, 2
+
+//n=5
+//c1 1, 1, 1, 1, 1
+//c2 2, 1, 1, 1
+//c3 1, 2, 1, 1
+//c4 1, 1, 2, 1
+//c5 1, 1, 1, 2
+//c6 2, 2, 1
+//c7 1, 2, 2
+//c8 2, 1, 2
+
+//It seems like c will always correspond to nth number of fibonacci sequence, accounting for seeds/starting points
+#endregion
 
 Console.WriteLine("Enter how many steps you stairs have: ");
 int n = Convert.ToInt32(Console.ReadLine());
