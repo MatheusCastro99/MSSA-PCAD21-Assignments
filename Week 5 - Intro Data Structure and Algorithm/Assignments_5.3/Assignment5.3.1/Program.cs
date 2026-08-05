@@ -5,7 +5,7 @@
 //flowerbed[i] is 0 or 1.
 //There are no two adjacent flowers in flowerbed.
 
-//Thoughts: 3 slot wide sliding window checking, at each position, i-1 and i+i
+//Thoughts: 3 slot wide sliding window checking, at each position, i-1 and i+1
 //Fix edge cases (i==0, where i-1 == null | i == flowerbed.Length-1, where i+1 == null)
 
 int[] flowerbed1 = [1, 0, 0, 0, 1];
@@ -67,6 +67,6 @@ bool CheckAvailability(int[] flowerbed, int n)
         return true;
     }
 
-    Console.WriteLine("No new flowers could be planted");
+    Console.WriteLine("New flowers goal could not be met");
     return false;
 }
