@@ -13,7 +13,22 @@ for(int i = 0; i<nums.Length; i++)
     }
 }
 Console.WriteLine(unique.First<int>()); //Exercise guarantees that only one element is unique, so it will be the only element in the Hash.
+
+//Using XOR:
+//Bitwise operation that compares the binary bits of two numbers.
+
+//Self-Cancellation: Any number XORed with itself equals zero (x ^ x = 0).
+//Identity: Any number XORed with zero stays the same (x ^ 0 = x).
+//Commutative & Associative: Order does not matter ( (x ^ y ^ x) == (x ^ x ^ Y) == (0 ^ y) = y).
+
+int distinct = 0;
+for (int i = 0; i < nums.Length; i++)
+{
+    distinct ^= nums[i];
+}
 #endregion
+
+Console.WriteLine();
 
 #region WEEK 5 CHALLENGE LAB 2
 //Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
@@ -22,34 +37,40 @@ Console.WriteLine(unique.First<int>()); //Exercise guarantees that only one elem
 //It can be expected that nums.length == n. In [0,2] (missing 1) n==2 and Length ==2
 
 //Could start by sorting, then check if nums[i+1] == nums[i] + 1.
-//Maybe I could skip sorting using Contains. n=2, [0, 2] (missing 1), iterate through array checking if Array.Contains(i)
+//Maybe I could skip sorting using Contains. Iterating through array using a for loop checking if Array.Contains(i) would work regardless or elements order
 
-//If Contains is off-limits. I could add all numbers from 0, n to a hashSet, then iterate through the array trying to read them
+//If Contains is off-limits. I could add all numbers from 0 to n to a hashSet, then iterate through the array trying to read them
 //Similar to checking duplicates, I could then remove the number that triggered the failed conditions
 //The hashset would be left with only the missing number
 
-int[] ex1 = [3, 0, 1]; //n == 3, missing 2
-int[] ex2 = [0, 1]; //n == 2, missing 2
-int[] ex3 = [9, 6, 4, 2, 3, 5, 7, 0, 1]; //n == 9, missing 8
+//If I knew the sum of all numbers from 0 to n, then I could simply subtract the sum of the elements in nums, the result would be the missing element
 
-//FindMissingContains(ex1);
+int[] ex1 = [3, 0, 1]; //n == 3, missing number 2
+int[] ex2 = [0, 1]; //n == 2, missing number 2
+int[] ex3 = [9, 6, 4, 2, 3, 5, 7, 0, 1]; //n == 9, missing number 8
+
+FindMissingContains(ex1);
 //FindMissingContains(ex2);
 //FindMissingContains(ex3);
 
-FindMissingHash(ex1);
+//FindMissingHash(ex1);
 FindMissingHash(ex2);
-FindMissingHash(ex3);
+//FindMissingHash(ex3);
+
+//FindMissingMath(ex1);
+//FindMissingMath(ex2);
+FindMissingMath(ex3);
 
 void FindMissingContains(int[] nums)
 {
+    if (!nums.Contains<int>(nums.Length)) //Exception case where missing number == n
+    {
+        Console.WriteLine($"{nums.Length} is missing from {string.Join(", ", nums)}");
+        return;
+    }
+
     for (int i = 0; i < nums.Length; i++)
     {
-        if (!nums.Contains<int>(nums.Length)) //Exception case where missing number == n
-        {
-            Console.WriteLine($"{nums.Length} is missing from {string.Join(", ", nums)}");
-            break;
-        }
-
         if (!nums.Contains<int>(i))
         {
             Console.WriteLine($"{i} is missing from {string.Join(", ", nums)}");
@@ -83,6 +104,19 @@ void FindMissingHash(int[] nums)
         numsHash.Add(nums.Length);
     }
 
-    Console.WriteLine(numsHash.First<int>());
+    Console.WriteLine($"{numsHash.First<int>()} is missing from {string.Join(", ", nums)}");
+    Console.WriteLine();
+}
+
+void FindMissingMath(int[] nums)
+{
+    int n = nums.Length;
+
+    int sumToN = n * (n + 1) / 2; //Mathematical term Gauss sum
+    int sumNums = nums.Sum();
+
+    int missing = sumToN - sumNums;
+
+    Console.WriteLine($"{missing} is missing from {string.Join(", ", nums)}");
 }
 #endregion
