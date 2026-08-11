@@ -14,7 +14,7 @@
 #endregion
 
 //First variables for different methods
-int[] nums = [0, 1, 0, 0, 3, 12];
+int[] nums = [1, 4, 0, 3, 0, 0, 12];
 int[] numsArrayList = nums;
 int[] numsPointer = nums;
 
