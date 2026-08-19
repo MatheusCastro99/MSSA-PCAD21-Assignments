@@ -6,8 +6,6 @@
 //Do that for each string, after, sort dictionaries by alphabetical order
 //If words are anagram to each other, sorted dictionaries will be exaclty the same
 
-using System.Collections.Immutable;
-
 string input1 = "anagram";
 string input2 = "nagaram";
 
@@ -67,6 +65,17 @@ bool IsAnagram(string input1, string input2)
     {
         return true;
     }
+
+    #region LINQ method explanation
+    //How this LINQ works:
+    //.All Determines if every element satisfy certain condition (a foreach with a predetermined bool check);
+    //kvp Lambda immediately executes left side, like a one line method, where kvp holds the current iteration of input1Dict.All with Key and Value;
+    //TryGetValue tries to get each value by the key and store it on a val variable;
+    //Because it is being called from inside input1Dict, kvp.Key will provide the current key iteration of input1Dict.All
+    //      and the val variable will hold input2Dict Value associated with that key;
+    //Equals then Compares the kvp current Value with the val stored;
+    //This process is done for each key value pair (kvp) of input1Dict
+    #endregion
 
     return false;
 }
