@@ -10,8 +10,8 @@ Student JohnDoe = new()
 {
     Id = 1,
     Name = "Cleiton",
-    Age = 10,
-    Major = "Engrish"
+    Age = 20,
+    Major = "English"
 };
 
 //JSON--------------------------------------------------------------------------------
