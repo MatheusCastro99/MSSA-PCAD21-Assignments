@@ -2,6 +2,8 @@
 
 //Different methods to separate arrays and then merge them
 
+//MERGE SORT:
+
 //Separate:
 //Identify middle element, separate into subarrays left and right
 //recursive until subarrays have one element
