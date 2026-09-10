@@ -16,7 +16,14 @@
 //The result of the merge is [1].
 //Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
-void Merge(int[] nums1, int m, int[] nums2, int n)
+int[] nums1 = [1, 2, 3, 0, 0, 0];
+int m = 3;
+int[] nums2 = [2, 5, 6];
+int n = 3;
+
+Console.WriteLine(string.Join(",  ", Merge(nums1, m, nums2, n)));
+
+int[] Merge(int[] nums1, int m, int[] nums2, int n)
 {
     // Set pointers for nums1, nums2, and the final merged array
     // It is said that nums1 and 2 have the length of m and n, so m-1 and n-1 represent the last element of those arrays
@@ -49,4 +56,6 @@ void Merge(int[] nums1, int m, int[] nums2, int n)
         p2--;
         p--;
     }
+
+    return nums1;
 }
