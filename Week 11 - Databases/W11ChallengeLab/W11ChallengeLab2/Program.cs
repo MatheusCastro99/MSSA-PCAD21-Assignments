@@ -16,7 +16,7 @@
 //Thoughts:
 //We can use a dictionary to count the occurrences of each character in the input string.
 //We can create another dictionary to store the required counts of each character in the word "balloon".
-//Afterwards, we can check for how many times we can "subtract" balloon dictionary from the input dictionary, and return the minimum number of times we can do that.
+//Afterwards, we can check for how many times we can "subtract" each balloon's dictionary kvp from the input dictionary, and return the minimum number of times we can do that.
 
 string input = "loonbalxballpoon";
 Dictionary<char, int> charCount = new ();
